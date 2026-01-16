@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Syne:wght@800&display=swap');
+
+:root {
+  --neon-pink: #ff007f;
+  --neon-yellow: #f0ff00;
+  --neon-blue: #00f0ff;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+}
+
+.app-header {
+  background: var(--neon-yellow);
+  border-bottom: 4px solid var(--black);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-text h1 {
+  font-family: 'Syne', sans-serif;
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -2px;
+}
+
+.category-container {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  overflow-x: auto;
+  background: white;
+}
+
+.category-chip {
+  padding: 8px 16px;
+  border: 3px solid var(--black);
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px var(--black);
+  white-space: nowrap;
+}
+
+.category-chip.active {
+  background: var(--neon-pink);
+  color: white;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  padding-bottom: 120px;
+}
+
+.product-card {
+  border: 3px solid var(--black);
+  background: white;
+  box-shadow: 4px 4px 0px var(--black);
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 120px; /* Reduced size to fix "too big" issue */
+  border-bottom: 3px solid var(--black);
+  position: relative;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 35px;
+  height: 35px;
+  background: var(--neon-blue);
+  border: 2px solid var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--black);
+}
+
+.product-info { padding: 10px; }
+.product-name { font-weight: bold; font-size: 0.85rem; margin-bottom: 5px; }
+.product-price { color: var(--neon-pink); font-weight: 800; font-size: 0.9rem; }
+
+.fixed-cart {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px;
+  background: var(--black);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 6px 6px 0px var(--neon-pink);
+  z-index: 1000;
+}
+
+.bill-details { display: flex; flex-direction: column; }
+.label { font-size: 0.7rem; color: #888; }
+.amount { font-size: 1.1rem; font-weight: bold; }
+
+.checkout-btn {
+  background: var(--neon-blue);
+  border: none;
+  padding: 10px 20px;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+}

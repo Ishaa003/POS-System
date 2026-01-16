@@ -1,0 +1,3 @@
+- [x] Update PosScreen.jsx to display product images instead of URLs in product cards
+- [x] Update PosScreen.jsx to display item images instead of URLs in cart items
+- [x] Update orderScreen.jsx to display item images instead of URLs in order details
